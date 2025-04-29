@@ -1,107 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Edgewater Neighborhood</title>
+  <meta charset="UTF-8">
+  <title>Edgewater Neighborhood</title>
+  <link href="style.css" rel="stylesheet" />
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .text-section {
+      flex: 2;
+    }
+
+    .image-section {
+      flex: 1;
+    }
+
+    .image-section figure {
+      margin-bottom: 20px;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      display: block;
+    }
+
+    .image-section figcaption {
+      font-size: 0.9em;
+      color: #444;
+      margin-top: 5px;
+    }
+
+    .navbar {
+      background-color: #333;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-list li {
+      flex: 1;
+      text-align: center; 
+    }
+
+    .nav-list a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 0.75rem;
+      font-weight: bold;
+    }
+
+    .nav-list a:hover {
+      background-color: #555;
+    }
+
+  </style>
 </head>
 <body>
 
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bucktown.html">Bucktown</a></li>
+      <li><a href="edgewater.html">Edgewater</a></li>
+      <li><a href="mtgreenwood.html">Mt. Greenwood</a></li>
+      <li><a href="rogerspark.html">Rogers Park</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  
+
 <h1>Edgewater Neighborhood</h1>
 
-<!-- Fragment link -->
-<p><a href="#favorites">Jump to Favorite Places</a></p>
+<!-- Flex Layout Container -->
+<div class="container">
+  <!-- Text content -->
+  <div class="text-section">
+    <h2>About Edgewater</h2>
+    <p>
+      Edgewater, located on Chicago's North Side, is a vibrant lakefront community known for its rich history, stunning architecture, and diverse neighborhoods. 
+      Originally part of Lake View Township, it was annexed by Chicago in 1889 and quickly developed into a popular residential area for Chicago’s elite. 
+      Beautiful lakefront homes, beaches, and thriving local businesses helped Edgewater grow into a distinct and desirable community.
+    </p>
+    <p>
+      One of Edgewater's most famous landmarks was the luxurious Edgewater Beach Hotel, which opened in 1916. 
+      This resort attracted celebrities, politicians, and tourists from all over the country with its private beach and grand ballrooms. 
+      Although the hotel is gone today, Edgewater’s spirit of charm and community lives on through its preserved historic districts and active local culture.
+    </p>
+    <p>
+      Today, Edgewater is beloved for its walkable streets, beautiful parks, strong arts scene, and vibrant dining options. 
+      Residents and visitors alike enjoy easy access to Lake Michigan’s beaches, cultural festivals, and a variety of unique shops and restaurants.
+    </p>
 
-<!-- Main Content Layout -->
-<table>
-    <tr>
-        <!-- Left side: Text -->
-        <td style="vertical-align: top; width: 70%;">
-        
-            <h2>About Edgewater</h2>
-            <p>
-            Edgewater, located on Chicago's North Side, is a vibrant lakefront community known for its rich history, stunning architecture, and diverse neighborhoods. 
-            Originally part of Lake View Township, it was annexed by Chicago in 1889 and quickly developed into a popular residential area for Chicago’s elite. 
-            Beautiful lakefront homes, beaches, and thriving local businesses helped Edgewater grow into a distinct and desirable community.
-            </p>
+    <h2>Neighborhoods and Historic Districts</h2>
+    <ul>
+      <li><strong>Andersonville:</strong> Known for its Swedish heritage, indie shops, and lively commercial district.</li>
+      <li><strong>Edgewater Glen:</strong> A quiet residential area featuring charming early 20th-century homes.</li>
+      <li><strong>Bryn Mawr Historic District:</strong> Famous for historic architecture, art deco buildings, and vintage streetlamps.</li>
+      <li><strong>Lakewood-Balmoral Historic District:</strong> Listed on the National Register of Historic Places, with beautifully preserved homes from the late 1800s.</li>
+    </ul>
 
-            <p>
-            One of Edgewater's most famous landmarks was the luxurious Edgewater Beach Hotel, which opened in 1916. 
-            This resort attracted celebrities, politicians, and tourists from all over the country with its private beach and grand ballrooms. 
-            Although the hotel is gone today, Edgewater’s spirit of charm and community lives on through its preserved historic districts and active local culture.
-            </p>
+    <h2>Parks and Recreation</h2>
+    <p>
+      Edgewater offers fantastic outdoor spaces, including access to multiple beaches and parks. 
+      The community is adjacent to Lincoln Park, Chicago's largest park, which stretches for seven miles along the lakefront. 
+      Locals love visiting Foster Beach and Osterman Beach for summer fun and year-round scenic views.
+    </p>
 
-            <p>
-            Today, Edgewater is beloved for its walkable streets, beautiful parks, strong arts scene, and vibrant dining options. 
-            Residents and visitors alike enjoy easy access to Lake Michigan’s beaches, cultural festivals, and a variety of unique shops and restaurants.
-            </p>
+    <h2 id="favorites">Favorite Places in Edgewater</h2>
+    <ol>
+      <li><a href="https://www.sferachicago.com/" target="_blank">Sfera Sicilian Street Food</a></li>
+      <li><a href="https://lostlarson.com/" target="_blank">Lost Larson</a></li>
+      <li><a href="https://edgewatercandles.com/" target="_blank">Edgewater Candles</a></li>
+      <li><a href="https://unchartedbooks.com/" target="_blank">Uncharted Books</a></li>
+    </ol>
 
-            <h2>Neighborhoods and Historic Districts</h2>
-            <ul>
-                <li><strong>Andersonville:</strong> Known for its Swedish heritage, indie shops, and lively commercial district.</li>
-                <li><strong>Edgewater Glen:</strong> A quiet residential area featuring charming early 20th-century homes.</li>
-                <li><strong>Bryn Mawr Historic District:</strong> Famous for historic architecture, art deco buildings, and vintage streetlamps.</li>
-                <li><strong>Lakewood-Balmoral Historic District:</strong> Listed on the National Register of Historic Places, with beautifully preserved homes from the late 1800s.</li>
-            </ul>
+    <h2>Explore Edgewater</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qEl3ynMOR3k" title="Edgewater Neighborhood Video" frameborder="0" allowfullscreen></iframe>
+  </div>
 
-            <h2>Parks and Recreation</h2>
-            <p>
-            Edgewater offers fantastic outdoor spaces, including access to multiple beaches and parks. 
-            The community is adjacent to Lincoln Park, Chicago's largest park, which stretches for seven miles along the lakefront. 
-            Locals love visiting Foster Beach and Osterman Beach for summer fun and year-round scenic views.
-            </p>
+  <!-- Images with captions -->
+  <div class="image-section">
+    <figure>
+      <img src="images/edgewater_church.jpg" alt="The Saint Ita Catholic Church bell tower">
+      <figcaption>The Saint Ita Catholic Church bell tower.</figcaption>
+    </figure>
 
-            <h2>Community Demographics</h2>
-            <table border="1">
-                <tr>
-                    <th>Population Group</th>
-                    <th>Percentage</th>
-                </tr>
-                <tr>
-                    <td>White</td>
-                    <td>56.6%</td>
-                </tr>
-                <tr>
-                    <td>Black</td>
-                    <td>12.3%</td>
-                </tr>
-                <tr>
-                    <td>Hispanic</td>
-                    <td>15.0%</td>
-                </tr>
-                <tr>
-                    <td>Asian</td>
-                    <td>12.4%</td>
-                </tr>
-            </table>
+    <figure>
+      <img src="images/magnolia_glen.jpg" alt="Magnolia Glen">
+      <figcaption>Magnolia Glen.</figcaption>
+    </figure>
 
-            <h2 id="favorites">My Favorite Places in Edgewater</h2>
-            <ol>
-                <li><a href="https://www.chicagoparkdistrict.com/parks-facilities/foster-beach" target="_blank">Foster Beach</a></li>
-                <li><a href="https://www.yelp.com/biz/loaves-and-witches-chicago" target="_blank">Coffeeshop Loaves and Witches</a></li>
-                <li><a href="https://www.sferachicago.com/" target="_blank">Sfera Sicilian Street Food</a></li>
-                <li><a href="https://blowfishchicago.com/" target="_blank">Blowfish Sushi & Ramen</a></li>
-                <li><a href="https://lostlarson.com/" target="_blank">Lost Larson</a></li>
-                <li><a href="https://edgewatercandles.com/" target="_blank">Edgewater Candles</a></li>
-                <li><a href="https://unchartedbooks.com/" target="_blank">Uncharted Books</a></li>
-            </ol>
-
-            <h2>Explore Edgewater</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/qEl3ynMOR3k" title="Edgewater Neighborhood Video" frameborder="0" allowfullscreen></iframe>
-
-            <h2>Contact</h2>
-            <p>If you have questions about visiting Edgewater, feel free to <a href="mailto:info@edgewaterchicago.com">email us</a>!</p>
-
-        </td>
-
-        <!-- Right side: Images vertically stacked -->
-        <td style="vertical-align: top; width: 30%;">
-            <img src="images/edgewater_church.jpg" alt="The Saint Ita Catholic Church bell tower" width="250"><br><br>
-            <img src="images/magnolia_glen.jpg" alt="Magnolia Glen" width="250"><br><br>
-            <img src="images/lake_view.jpg" alt="View of Lake Michigan" width="250"><br><br>
-            <img src="edgewater_street.jpg" alt="Edgewater Street" width="250">
-        </td>
-    </tr>
-</table>
+    <figure>
+      <img src="images/lake_view.jpg" alt="View of Lake Michigan">
+      <figcaption>Lakefront views along Edgewater’s shoreline.</figcaption>
+    </figure>
+  </div>
+</div>
 
 </body>
 </html>
