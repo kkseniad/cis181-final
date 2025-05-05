@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Garfield Ridge Neighborhood</title>
+    <link rel="stylesheet" href="./../css/font-styles.css" />
+    <link rel="stylesheet" href="./../css/layout-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 20px;
+      }
+
+      .text-section {
+        flex: 2;
+      }
+
+      .image-section {
+        flex: 1;
+      }
+
+      .image-section figure {
+        margin-bottom: 20px;
+      }
+
+      .image-section img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        display: block;
+      }
+
+      .image-section figcaption {
+        font-size: 0.9em;
+        color: #444;
+        margin-top: 5px;
+      }
+
+      .navbar {
+        background-color: #333;
+        padding: 0.5rem 1rem;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-list li {
+        flex: 1;
+        text-align: center;
+      }
+
+      .nav-list a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 0.75rem;
+        font-weight: bold;
+      }
+
+      .nav-list a:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./../assets/navbar-logo/logo.svg" alt="Neighborhoods of Chicago" />
+        <h1 class="navbar-main">Neighborhoods of Chicago</h1>
+      </div>
+      <ul class="nav-list">
+        <li><a href="./../index.html">Home</a></li>
+        <li><a href="./garfield-ridge.html">Garfield Ridge</a></li>
+        <li><a href="./edgewater.html">Edgewater</a></li>
+        <li><a href="./mtgreenwood.html">Mt. Greenwood</a></li>
+        <li><a href="./rogerspark.html">Rogers Park</a></li>
+        <li><a href="./../about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <h1>Edgewater Neighborhood</h1>
+
+    <!-- Flex Layout Container -->
+    <div class="container">
+      <!-- Text content -->
+      <div class="text-section">
+        <h2 class="section-title">About Garfield Ridge</h2>
+        <p>
+          Garfield Ridge is the 56th of Chicago’s 77 community areas, located
+          about ten miles southwest of the Loop on the far-southwest side of the
+          city.
+        </p>
+        <p>
+          Once considered the rural outskirts of Chicago, Garfield Ridge
+          transformed into a suburban-style enclave with the arrival of Midway
+          International Airport in 1927 and the Stevenson Expressway (I-55) in
+          1956, bringing new businesses and residential development along Archer
+          Avenue.
+        </p>
+
+        <h2 class="section-title">Neighborhoods and Historic Districts</h2>
+        <ul class="districts-list">
+          <li>
+            <strong>Chrysler Village:</strong> A small enclave on the eastern
+            edge of Garfield Ridge, originally built in 1943 to house Chrysler
+            Defense Plant workers and characterized by sturdy brick single- and
+            multi-family homes around Lawler Park.
+          </li>
+          <li>
+            <strong>Clearing:</strong> Directly adjacent to the east, Clearing
+            is Community Area 64, known for its industrial roots along railroad
+            yards and the southern portion of Midway Airport, yet it maintains
+            quiet, tree-lined residential streets.
+          </li>
+          <li>
+            <strong>Archer Heights:</strong> To the north, Archer Heights
+            features mid-century bungalows and small businesses along Archer
+            Avenue, reflecting the neighborhood’s evolution after Midway Airport
+            and the Stevenson Expressway spurred suburban-style growth.
+          </li>
+          <li>
+            <strong>West Elsdon:</strong> Southwest of Garfield Ridge, West
+            Elsdon offers expansive green spaces such as Meyer Park, a strong
+            Polish-American community presence, and a mix of single-family homes
+            and local commercial corridors.
+          </li>
+          <li>
+            <strong>West Lawn:</strong> Due west, West Lawn is celebrated for
+            its vibrant Mexican cultural festivals, family-friendly parks, and
+            close-knit neighborhoods that blend residential calm with easy
+            access to city amenities.
+          </li>
+        </ul>
+
+        <h2 class="section-title">Parks and Recreation</h2>
+        <div class="parks-section">
+          <p>
+            <strong>Buttercup Park:</strong> A 1.41‑acre playground with an
+            ADA‑accessible surface, splash pad, swings, and climbing
+            structures—ideal for families enjoying warm summer days.
+          </p>
+          <p>
+            <strong>Wentworth Park:</strong> Spanning 15.81 acres, this park
+            features an indoor gymnasium, Olympic‑size pool, multipurpose rooms,
+            sports fields, tennis and basketball courts, a spray pool, and a
+            seasonal ice rink.
+          </p>
+          <p>
+            <strong>Normandy Park:</strong> Encompassing 2.90 acres, Normandy
+            Park offers youth programs, softball and volleyball courts, and
+            summer day camps, making it a hub for community events and
+            recreation.
+          </p>
+        </div>
+
+        <h2 id="favorites" class="section-title">
+          Favorite Places in Garfield Ridge
+        </h2>
+        <ol class="favorites-list">
+          <li>
+            <a
+              href="https://www.homeruninnpizza.com/restaurants/archer-ave/"
+              target="_blank"
+            >
+              Home Run Inn Pizza (6221 S Archer Ave)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.dannyschicago.com/" target="_blank">
+              Danny’s Pizza, Pasta & Burgers (6021 S Archer Ave)
+            </a>
+          </li>
+          <li>
+            <a href="https://ciaoragazzirestaurantandbar.com/" target="_blank">
+              Ciao Ragazzi Restaurant & Bar (5440 S Narragansett Ave)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/GRFarmersmarket/" target="_blank">
+              Midway Chamber Farmers Market (55th & Archer)
+            </a>
+          </li>
+        </ol>
+
+        <h2>Explore Garfield Ridge</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/l9OKICy5YfI?si=F6ZahbSpKueyzNIK"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Images with captions -->
+      <div class="image-section">
+        <figure>
+          <img
+            src="./../assets/images//garfieldRidge/Intro_Jason-Schumer-1.jpg"
+            alt="Garfield ridge mural"
+          />
+          <figcaption>Mural on Archer Ave.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://imagescdn.homes.com/i2/hBiJgTNkKnwHfGGsnrkc5LMWRnAvYvYoVB7vNzkHl6Y/102/garfield-ridge-chicago-il-2.jpg?p=1" alt="Garfield Ridge" />
+          <figcaption>Garfield Ridge</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://imagescdn.homes.com/i2/q2YnKcCrO7qWu839Jeq32n4nj2j2v-MpAvNYXi4JuOM/116/garfield-ridge-chicago-il-29.jpg?p=1" alt="Garfield Ridge sign" />
+          <figcaption>Garfield Ridge Chicago proud</figcaption>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>

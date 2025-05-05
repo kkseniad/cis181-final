@@ -1,167 +1,266 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Mt.Greenwood Neighborhood</title>
-  <link rel="stylesheet" href="font_styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mt.Greenwood Neighborhood</title>
+    <link rel="stylesheet" href="./../css/font-styles.css" />
+    <link rel="stylesheet" href="./../css/layout-styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-  <style>
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      padding: 20px;
-    }
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 20px;
+      }
 
-    .text-section {
-      flex: 2;
-    }
+      .text-section {
+        flex: 2;
+      }
 
-    .image-section {
-      flex: 1;
-    }
+      .image-section {
+        flex: 1;
+      }
 
-    .image-section figure {
-      margin-bottom: 20px;
-    }
+      .image-section figure {
+        margin-bottom: 20px;
+      }
 
-    .image-section img {
-      width: 100%;
-      max-width: 250px;
-      height: auto;
-      display: block;
-    }
+      .image-section img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        display: block;
+      }
 
-    .image-section figcaption {
-      font-size: 0.9em;
-      color: #444;
-      margin-top: 5px;
-    }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+      }
 
-    .navbar {
-      background-color: #333;
-      padding: 0.5rem 1rem;
-    }
+      .nav-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+      }
 
-    .nav-list {
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-      margin: 0;
-    }
+      .nav-list a {
+        color: #d4052b;
+        font-size: 1em;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        white-space: nowrap;
+      }
 
-    .nav-list li {
-      flex: 1;
-      text-align: center; 
-    }
+      .navbar-main {
+        font-size: 1.5em;
+        margin-left: 10px;
+      }
 
-    .nav-list a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      padding: 0.75rem;
-      font-weight: bold;
-    }
+      .logo {
+        display: flex;
+        align-items: center;
+        width: auto;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const banner = document.getElementById("pageBanner");
+        let initialHeight = banner.offsetHeight;
+    
+        function onScrollOrResize() {
+          const scrollY = window.pageYOffset;
+          // calculate new height (won’t go below 20vh)
+          const newHeight = Math.max(initialHeight - scrollY, window.innerHeight * 0.2);
+          banner.style.height = `${newHeight}px`;
+        }
+    
+        // recalc initial height if window resizes
+        window.addEventListener("resize", () => {
+          initialHeight = banner.offsetHeight;
+          onScrollOrResize();
+        });
+    
+        window.addEventListener("scroll", onScrollOrResize);
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./../assets/navbar-logo/logo.svg" alt="Neighborhoods of Chicago" />
+        <h1 class="navbar-main">Neighborhoods of Chicago</h1>
+      </div>
+      <ul class="nav-list">
+        <li><a href="./../index.html">Home</a></li>
+        <li><a href="./garfield-ridge.html">Garfield Ridge</a></li>
+        <li><a href="./edgewater.html">Edgewater</a></li>
+        <li><a href="./mtgreenwood.html">Mt. Greenwood</a></li>
+        <li><a href="./rogerspark.html">Rogers Park</a></li>
+        <li><a href="./../about.html">About</a></li>
+      </ul>
+    </nav>
 
-    .nav-list a:hover {
-      background-color: #555;
-    }
-  </style>
-</head>
-<body>
+    <!-- Page Title -->
+    <div class="page-banner" id="pageBanner">
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <h1>Explore Chicago’s Neighborhoods</h1>
+        <p>Scroll down to discover each community’s unique flavor.</p>
+      </div>
+    </div>
+    <!-- Flex Layout Container -->
+    <div class="container">
+      <!-- Text content -->
+      <div class="text-section table-content">
+        <h2>About Mount Greenwood</h2>
+        <p>
+          Mount Greenwood, located on Chicago's Far Southwest Side, is a less
+          densely populated neighborhood with a predominantly Irish-Catholic
+          population. Known for its large population of city employees,
+          Chicago’s last farm, and numerous cemeteries, it’s more like a suburb
+          inside Chicago. It was annexed officially in 1927, but the
+          neighborhood's history goes back far before that.
+        </p>
+        <p>
+          The neighborhood’s history starts in 1879 when George Waite founded
+          the Mount Greenwood Cemetery. This was quickly followed by more
+          cemeteries as the land was used at the time for farming leading it to
+          be nicknamed "Seven Holy Tombs". By 1897, Irish and German taverns and
+          restaurants started to appear as the neighborhood began forming. The
+          community voted for annexation in 1927 to get sewers, street-lights,
+          waterlines, and public schools. Post-WW2, the neighborhood grew
+          immensely, adding numerous private catholic schools, bars, and an
+          Irish parade for St. Patrick's Day. It also received additional spikes
+          in migration due to white flight following the civil rights movement,
+          as the Irish community consolidated heavily in the neighborhood. By
+          1980, the last farm sold in Mt. Greenwood was converted into an
+          agricultural high school, making it the last active farm inside
+          Chicago's city limits.
+        </p>
+        <p>
+          The Chicago Agricultural High School remains one of the most unique
+          buildings in the neighborhood. The wide stretch of farmland and
+          animals in Chicago makes for an interesting sight and a pleasant walk.
+          The annual pumpkin smash event is one of many community events held by
+          the school.
+        </p>
 
-  <!-- Nav Bar -->
-<nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="bucktown.html">Bucktown</a></li>
-      <li><a href="edgewater.html">Edgewater</a></li>
-      <li><a href="mtgreenwood.html">Mt. Greenwood</a></li>
-      <li><a href="rogerspark.html">Rogers Park</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+        <h2>Neighborhoods and Historic Districts</h2>
+        <ul>
+          <li>
+            <strong>Mt. Greenwood:</strong> Central part of the neighborhood,
+            which hosts the main street of S. Kendzie Ave and the public school.
+          </li>
+          <li>
+            <strong>Mt. Greenwood Heights:</strong> A compact residential area
+            on the south end of Mt. Greenwood with many 1940s-50s era homes.
+          </li>
+          <li>
+            <strong>Tallys Corner:</strong> A small, tight-knit community
+            nestled in the north of Mt. Greenwood, which mostly consists of St.
+            Xavier University.
+          </li>
+        </ul>
 
-  <h1>Mount Greenwood Neighborhood</h1>
+        <h2>Parks and Recreation</h2>
+        <p>
+          Mt. Greenwood has a few community parks that double as fields for
+          sports like baseball, soccer, football, swimming, and basketball.
+          Additionally, residents can freely walk the St. Xavier University
+          campus and are closeby to the Joan & Kroc Community Center and Oak
+          Lawn Community Pavilion. These parks and centers are often used by
+          community groups or local school teams for sports tournaments.
+        </p>
 
-  <!-- Flex Layout Container -->
-<div class="container">
-  <!-- Text content -->
-  <div class="text-section">
-    <h2>About Mount Greenwood</h2>
-    <p>
-      Mount Greenwood, located on Chicago's Far Southwest Side, is a less densely populated neighborhood with a predominantly Irish-Catholic population.
-      Known for its large population of city employees, Chicago’s last farm, and numerous cemeteries, it’s more like a suburb inside Chicago.
-      It was annexed officially in 1927, but the neighborhood's history goes back far before that.
-    </p>
-    <p>
-      The neighborhood’s history starts in 1879 when George Waite founded the Mount Greenwood Cemetery.
-      This was quickly followed by more cemeteries as the land was used at the time for farming leading it to be nicknamed "Seven Holy Tombs".
-      By 1897, Irish and German taverns and restaurants started to appear as the neighborhood began forming.
-      The community voted for annexation in 1927 to get sewers, street-lights, waterlines, and public schools. 
-      Post-WW2, the neighborhood grew immensely, adding numerous private catholic schools, bars, and an Irish parade for St. Patrick's Day. 
-      It also received additional spikes in migration due to white flight following the civil rights movement, as the Irish community consolidated heavily in the neighborhood.
-      By 1980, the last farm sold in Mt. Greenwood was converted into an agricultural high school, making it the last active farm inside Chicago's city limits.
-    </p>
-    <p>
-      The Chicago Agricultural High School remains one of the most unique buildings in the neighborhood.
-      The wide stretch of farmland and animals in Chicago makes for an interesting sight and a pleasant walk.
-      The annual pumpkin smash event is one of many community events held by the school.
-    </p>
+        <h2 id="favorites">Favorite Places in Mt. Greenwood</h2>
 
-    <h2>Neighborhoods and Historic Districts</h2>
-    <ul>
-      <li><strong>Mt. Greenwood:</strong> Central part of the neighborhood, which hosts the main street of S. Kendzie Ave and the public school.</li>
-      <li><strong>Mt. Greenwood Heights:</strong> A compact residential area on the south end of Mt. Greenwood with many 1940s-50s era homes.</li>
-      <li><strong>Tallys Corner:</strong> A small, tight-knit community nestled in the north of Mt. Greenwood, which mostly consists of St. Xavier University.</li>
-    </ul>
+        <ul class="grid">
+          <li class="item">
+            <a href="https://popsbeef.com/location/chicago/" target="_blank"
+              >Pops Beef-Chicago</a
+            >
+          </li>
+          <li class="item">
+            <a href="https://www.barracospizzachicago.com/" target="_blank"
+              >Barracos Pizza</a
+            >
+          </li>
+          <li class="item">
+            <a
+              href="https://lacatrinamexicanrestaurant.toast.site/"
+              target="_blank"
+              >La Catrina Mexican Restaurant</a
+            >
+          </li>
+          <li class="item">
+            <a href="http://myalternatereality.com/" target="_blank"
+              >Alternative Reality Inc.</a
+            >
+          </li>
+          <li class="item">
+            <a
+              href="https://www.facebook.com/p/Lawlors-Bar-on-111th-Street-100042886437107/"
+              target="_blank"
+              >Lawlor's Bar</a
+            >
+          </li>
+        </ul>
 
-    <h2>Parks and Recreation</h2>
-    <p>
-      Mt. Greenwood has a few community parks that double as fields for sports like baseball, soccer, football, swimming, and basketball. 
-      Additionally, residents can freely walk the St. Xavier University campus and are closeby to the Joan & Kroc Community Center and Oak Lawn Community Pavilion.  
-      These parks and centers are often used by community groups or local school teams for sports tournaments.
-    </p>
+        <h2>Explore Mount Greenwood</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/51ZAJu-7sbo?si=QxSKZ8m83bFYLHYP"
+          title="MtGreenwood Neighborhood Video"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
 
-    <h2 id="favorites">Favorite Places in Mt. Greenwood</h2>
-    <ol>
-      <li><a href="https://popsbeef.com/location/chicago/" target="_blank">Pops Beef-Chicago</a></li>
-      <li><a href="https://www.barracospizzachicago.com/" target="_blank">Barracos Pizza</a></li>
-      <li><a href="https://lacatrinamexicanrestaurant.toast.site/" target="_blank">La Catrina Mexican Restaurant</a></li>
-      <li><a href="http://myalternatereality.com/" target="_blank">Alternative Reality Inc.</a></li>
-      <li><a href="https://www.facebook.com/p/Lawlors-Bar-on-111th-Street-100042886437107/" target="_blank">Lawlor's Bar</a></li>
-    </ol>
+      <!-- Images with captions -->
+      <div class="image-section">
+        <figure>
+          <img
+            src="assets/images/Mount_Greenwood_Sign.jpg"
+            alt="MtGreenwood Sign"
+          />
+          <figcaption>Mount Greenwood Community Sign</figcaption>
+        </figure>
 
-    <h2>Explore Mount Greenwood</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/51ZAJu-7sbo?si=QxSKZ8m83bFYLHYP" title="MtGreenwood Neighborhood Video" frameborder="0" allowfullscreen></iframe>
-  </div>
+        <figure>
+          <img
+            src="assets/images/chicago-high-school.jpg"
+            alt="Chicago Agriculture School"
+          />
+          <figcaption>
+            The Chicago High School for Agricultural Sciences
+          </figcaption>
+        </figure>
 
-  <!-- Images with captions -->
-  <div class="image-section">
-    <figure>
-      <img src="assets/images/Mount_Greenwood_Sign.jpg" alt="MtGreenwood Sign">
-      <figcaption>Mount Greenwood Community Sign</figcaption>
-    </figure>
-
-    <figure>
-      <img src="assets/images/chicago-high-school.jpg" alt="Chicago Agriculture School">
-      <figcaption>The Chicago High School for Agricultural Sciences</figcaption>
-    </figure>
-
-    <figure>
-      <img src="assets/images/Mt-Greenwood-map.jpg" alt="MtGreenwood Location">
-      <figcaption>Mount Greenwood location inside the city.</figcaption>
-    </figure>
-  </div>
-</div>
-
-  
-</body>
+        <figure>
+          <img
+            src="assets/images/Mt-Greenwood-map.jpg"
+            alt="MtGreenwood Location"
+          />
+          <figcaption>Mount Greenwood location inside the city.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </body>
 </html>
+
+
