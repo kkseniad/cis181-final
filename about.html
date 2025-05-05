@@ -19,49 +19,54 @@
       margin: 0 auto;
     }
 
-
     .author__grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1.25rem;
       margin-top: 2.5rem;
+    }
 
-      @media (max-width: 768px) {
+    @media (max-width: 768px) {
+      .author__grid {
         grid-template-columns: 1fr;
       }
+    }
 
-      @media (min-width: 769px) and (max-width: 1023px) {
+    @media (min-width: 769px) and (max-width: 1023px) {
+      .author__grid {
         grid-template-columns: repeat(1, 1fr);
       }
+    }
 
-      @media (min-width: 1024px) {
+    @media (min-width: 1024px) {
+      .author__grid {
         grid-template-columns: repeat(4, 1fr);
       }
     }
-    
-    .author__image{
-      height:auto;
+
+    .author__image {
+      height: auto;
       width: 250px;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
     }
-    .author-card{
+
+    .author-card {
       padding: 1.25rem;
       height: fit-content;
       background-color: transparent;
       border-radius: 1rem;
-    
     }
 
     .author-card:hover {
       transform: scale(1.05);
       transition: all 150ms ease-in-out;
-      box-shadow: 0px 3px 12px rgba(0,0,0,0.1);
+      box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
     }
 
     .author__text {
-      padding: .25rem;
+      padding: 0.25rem;
       background-color: transparent;
       border-radius: 0.3125rem;
     }
@@ -80,119 +85,114 @@
       margin-bottom: 0.5rem;
       text-decoration: none;
     }
-
-   
   </style>
 </head>
 <body>
 
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <div class="logo">
-        <img
-          src="./../assets/navbar-logo/logo.svg"
-          alt="Neighborhoods of Chicago"
-        />
-        <h1 class="navbar-main">Neighborhoods of Chicago</h1>
-      </div>
-      <ul class="nav-list">
-        <li><a href="./../index.html">Home</a></li>
-        <li><a href="./garfield-ridge.html">Garfield Ridge</a></li>
-        <li><a href="./edgewater.html">Edgewater</a></li>
-        <li><a href="./mtgreenwood.html">Mt. Greenwood</a></li>
-        <li><a href="./rogerspark.html">Rogers Park</a></li>
-        <li><a href="./../about.html">About</a></li>
-      </ul>
-    </nav>
-
-
-     <!-- Page Title -->
-     <div class="page-banner" id="pageBanner">
-      <div class="page-banner-overlay"></div>
-      <div class="page-banner-content">
-        <h1>Explore Chicago’s Neighborhoods</h1>
-        <p>Scroll down to discover each community’s unique flavor.</p>
-      </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./../assets/navbar-logo/logo.svg" alt="Neighborhoods of Chicago" />
+      <h1 class="navbar-main">Neighborhoods of Chicago</h1>
     </div>
+    <ul class="nav-list">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/neighborhoodPages/garfield-ridge.html">Garfield Ridge</a></li>
+      <li><a href="/neighborhoodPages/edgewater.html">Edgewater</a></li>
+      <li><a href="/neighborhoodPages/mtgreenwood.html">Mt. Greenwood</a></li>
+      <li><a href="/neighborhoodPages/rogerspark.html">Rogers Park</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Title -->
+  <div class="page-banner" id="pageBanner">
+    <div class="page-banner-overlay"></div>
+    <div class="page-banner-content">
+      <h1>Explore Chicago’s Neighborhoods</h1>
+      <p>Scroll down to discover each community’s unique flavor.</p>
+    </div>
+  </div>
 
   <div class="container">
-  <!-- start of author 1 -->  
-    <section class="">
-      <div class="">
+    <section>
+      <div>
         <h1>About Us</h1>
         <div class="author__grid">
-          
+
+          <!-- Author 1 -->
           <div class="author-card">
             <a href="https://www.linkedin.com/in/francesca-e-guerrero/">
-            <img class="author__image" src="./assets/images/francesca_image.jpg"/>
-               
-            
-            <div class="author__text">
-              <h4 class="author-name"> Francesca Guerrero</h4>
-              <p class="author-bio"> I have lived in Chicago since 2015 - another queer Brown southerner fleeing the region.
-              I have lived in Rogers Park for all of it. This city's been good to me, and I love talking about it to anyone visiting or 
-              family and friends who love me too much to quell my enthusiasm. I also love history, and this city's chock full of it. The 
-              shifting demographics of every pocket of Chicago is fascinating and truly still evolving. With that, I knew immediately on
-              receiving this CIS 181 assignment I wanted to use this project to discuss my favorite city and my first real home. 
-              Thankfully my group members agreed with the concept!</p>
-            </div>
-          </div></a>
-<!-- start of author 2 -->
-          <div class="author-card">
-            <a href="https://www.linkedin.com/in/tulio-salvatierra/">
-             <img class="author__image" src="./assets/images/Tulio_image.png"/>
-               
-            
-            
-              <h4 class="author-name"> Tulio Salvatierra </h4>
-              <p class="author-bio">Originally from Venezuela and now based in Chicago.
-                I started this project as part of the CIS 181 course at Daley College, with the goal of sharing general
-                insights into Chicago’s neighborhoods. I’m a web developer focused on front-end technologies like HTML,
-                CSS, JavaScript, and React, and I’m expanding into full-stack development with Node.js and Express, along
-                with cloud platforms like AWS and Azure.</p>
+              <img class="author__image" src="./assets/images/francesca_image.jpg" />
+              <div class="author__text">
+                <h4 class="author-name">Francesca Guerrero</h4>
+                <p class="author-bio">
+                  I have lived in Chicago since 2015 - another queer Brown southerner fleeing the region.
+                  I have lived in Rogers Park for all of it. This city's been good to me, and I love talking about it to anyone visiting or 
+                  family and friends who love me too much to quell my enthusiasm. I also love history, and this city's chock full of it. The 
+                  shifting demographics of every pocket of Chicago is fascinating and truly still evolving. With that, I knew immediately on
+                  receiving this CIS 181 assignment I wanted to use this project to discuss my favorite city and my first real home. 
+                  Thankfully my group members agreed with the concept!
+                </p>
+              </div>
             </a>
           </div>
-<!-- start of author 3 -->
+
+          <!-- Author 2 -->
+          <div class="author-card">
+            <a href="https://www.linkedin.com/in/tulio-salvatierra/">
+              <img class="author__image" src="./assets/images/Tulio_image.png" />
+              <div class="author__text">
+                <h4 class="author-name">Tulio Salvatierra</h4>
+                <p class="author-bio">
+                  Originally from Venezuela and now based in Chicago.
+                  I started this project as part of the CIS 181 course at Daley College, with the goal of sharing general
+                  insights into Chicago’s neighborhoods. I’m a web developer focused on front-end technologies like HTML,
+                  CSS, JavaScript, and React, and I’m expanding into full-stack development with Node.js and Express, along
+                  with cloud platforms like AWS and Azure.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Author 3 -->
           <div class="author-card">
             <a href="https://www.linkedin.com/in/kseniia-kormalova/">
-             <img class="author__image" src="./assets/images/kseniia_image.jpg"/>
-            
-            
-            <div class="author__text">
-              <h4 class="author-name"> Kseniia Kormalova </h4>
-              <p class="author-bio"> 
-                While working as a math teacher for elementary students, I realized that the problem-solving and pattern recognition
-                skills I enjoyed most in teaching also applied to software development. My curiosity about how technology works and 
-                my love for learning new languages—both spoken and programming—led me to enroll in the Software Development program 
-                at Truman College. This project was a great experience for me, especially because I focused on Edgewater, 
-                the neighborhood I love and live in. I even used my own photos for the Edgewater page, which made the project feel 
-                more personal and meaningful. </p>
-            </div></a>
+              <img class="author__image" src="./assets/images/kseniia_image.jpg" />
+              <div class="author__text">
+                <h4 class="author-name">Kseniia Kormalova</h4>
+                <p class="author-bio">
+                  While working as a math teacher for elementary students, I realized that the problem-solving and pattern recognition
+                  skills I enjoyed most in teaching also applied to software development. My curiosity about how technology works and 
+                  my love for learning new languages—both spoken and programming—led me to enroll in the Software Development program 
+                  at Truman College. This project was a great experience for me, especially because I focused on Edgewater, 
+                  the neighborhood I love and live in. I even used my own photos for the Edgewater page, which made the project feel 
+                  more personal and meaningful.
+                </p>
+              </div>
+            </a>
           </div>
-<!-- start of author 4 -->
+
+          <!-- Author 4 -->
           <div class="author-card">
             <a href="https://www.linkedin.com/in/emilio-hernandez-0068a1292/">
-            <img class="author__image" src="./assets/images/Emilio_image.png"/>
-               
-            
-            <div class="author__text">
-              <h4 class="author-name"> Emilio Hernandez</h4>
-              <p class="author-bio">
-                I'm Emilio Hernandez. I was born and raised in Chicago in 2007. I grew up in Mt. Greenwood, and I went to both private and public schools in my childhood.
-                I wanted to express my experiences inside my neighborhood throughout this project by sharing some of the things that make it interesting.
-                I'm interested in technology, but not sure exactly where I'd best fit in. Currently, I'm using both this class and my internship at IBM to figure out what sparks my interest before graduating from high school.
-              </p>
-            </div></a>
+              <img class="author__image" src="./assets/images/Emilio_image.png" />
+              <div class="author__text">
+                <h4 class="author-name">Emilio Hernandez</h4>
+                <p class="author-bio">
+                  I'm Emilio Hernandez. I was born and raised in Chicago in 2007. I grew up in Mt. Greenwood, and I went to both private and public schools in my childhood.
+                  I wanted to express my experiences inside my neighborhood throughout this project by sharing some of the things that make it interesting.
+                  I'm interested in technology, but not sure exactly where I'd best fit in. Currently, I'm using both this class and my internship at IBM to figure out what sparks my interest before graduating from high school.
+                </p>
+              </div>
+            </a>
           </div>
-          
-        </div>        
+
+        </div>
       </div>
       <a href="./index.html">Back to Home</a>
     </section>
-  
   </div>
- 
-    
+
 </body>
 </html>
