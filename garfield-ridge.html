@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Garfield Ridge Neighborhood</title>
-    <link rel="stylesheet" href="./../css/font-styles.css" />
-    <link rel="stylesheet" href="./../css/layout-styles.css" />
+    <link rel="stylesheet" href="css/font-styles.css" />
+    <link rel="stylesheet" href="css//layout-styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,14 +39,10 @@
         display: block;
       }
 
-      .image-section figcaption {
-        font-size: 0.9em;
-        color: #444;
-        margin-top: 5px;
-      }
-
       .navbar {
-        background-color: #333;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
         padding: 0.5rem 1rem;
       }
 
@@ -58,29 +54,58 @@
         margin: 0;
       }
 
-      .nav-list li {
-        flex: 1;
-        text-align: center;
-      }
-
       .nav-list a {
-        color: white;
+        color: #d4052b;
+        font-size: 1em;
         text-decoration: none;
-        display: block;
-        padding: 0.75rem;
-        font-weight: bold;
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        white-space: nowrap;
       }
 
-      .nav-list a:hover {
-        background-color: #555;
+      .navbar-main {
+        font-size: 1.5em;
+        margin-left: 10px;
       }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        width: auto;
+      }
+      
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const banner = document.getElementById("pageBanner");
+        let initialHeight = banner.offsetHeight;
+    
+        function onScrollOrResize() {
+          const scrollY = window.pageYOffset;
+          // calculate new height (won’t go below 20vh)
+          const newHeight = Math.max(initialHeight - scrollY, window.innerHeight * 0.2);
+          banner.style.height = `${newHeight}px`;
+        }
+    
+        // recalc initial height if window resizes
+        window.addEventListener("resize", () => {
+          initialHeight = banner.offsetHeight;
+          onScrollOrResize();
+        });
+    
+        window.addEventListener("scroll", onScrollOrResize);
+      });
+    </script>
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="logo">
-        <img src="./../assets/navbar-logo/logo.svg" alt="Neighborhoods of Chicago" />
+        <img
+          src="./../assets/navbar-logo/logo.svg"
+          alt="Neighborhoods of Chicago"
+        />
         <h1 class="navbar-main">Neighborhoods of Chicago</h1>
       </div>
       <ul class="nav-list">
@@ -93,7 +118,14 @@
       </ul>
     </nav>
 
-    <h1>Edgewater Neighborhood</h1>
+    <!-- Page Title -->
+    <div class="page-banner" id="pageBanner">
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <h1>Explore Chicago’s Neighborhoods</h1>
+        <p>Scroll down to discover each community’s unique flavor.</p>
+      </div>
+    </div>
 
     <!-- Flex Layout Container -->
     <div class="container">
@@ -115,36 +147,37 @@
 
         <h2 class="section-title">Neighborhoods and Historic Districts</h2>
         <ul class="districts-list">
-          <li>
+          <p>
             <strong>Chrysler Village:</strong> A small enclave on the eastern
             edge of Garfield Ridge, originally built in 1943 to house Chrysler
             Defense Plant workers and characterized by sturdy brick single- and
             multi-family homes around Lawler Park.
-          </li>
-          <li>
+          </p>
+
+          <p>
             <strong>Clearing:</strong> Directly adjacent to the east, Clearing
             is Community Area 64, known for its industrial roots along railroad
             yards and the southern portion of Midway Airport, yet it maintains
             quiet, tree-lined residential streets.
-          </li>
-          <li>
+          </p>
+          <p>
             <strong>Archer Heights:</strong> To the north, Archer Heights
             features mid-century bungalows and small businesses along Archer
             Avenue, reflecting the neighborhood’s evolution after Midway Airport
             and the Stevenson Expressway spurred suburban-style growth.
-          </li>
-          <li>
+          </p>
+          <p>
             <strong>West Elsdon:</strong> Southwest of Garfield Ridge, West
             Elsdon offers expansive green spaces such as Meyer Park, a strong
             Polish-American community presence, and a mix of single-family homes
             and local commercial corridors.
-          </li>
-          <li>
+          </p>
+          <p>
             <strong>West Lawn:</strong> Due west, West Lawn is celebrated for
             its vibrant Mexican cultural festivals, family-friendly parks, and
             close-knit neighborhoods that blend residential calm with easy
             access to city amenities.
-          </li>
+          </p>
         </ul>
 
         <h2 class="section-title">Parks and Recreation</h2>
@@ -168,34 +201,50 @@
           </p>
         </div>
 
-        <h2 id="favorites" class="section-title">
+        <h2 id="favorites">
           Favorite Places in Garfield Ridge
         </h2>
-        <ol class="favorites-list">
-          <li>
-            <a
-              href="https://www.homeruninnpizza.com/restaurants/archer-ave/"
-              target="_blank"
-            >
-              Home Run Inn Pizza (6221 S Archer Ave)
-            </a>
-          </li>
-          <li>
-            <a href="https://www.dannyschicago.com/" target="_blank">
-              Danny’s Pizza, Pasta & Burgers (6021 S Archer Ave)
-            </a>
-          </li>
-          <li>
-            <a href="https://ciaoragazzirestaurantandbar.com/" target="_blank">
-              Ciao Ragazzi Restaurant & Bar (5440 S Narragansett Ave)
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/GRFarmersmarket/" target="_blank">
-              Midway Chamber Farmers Market (55th & Archer)
-            </a>
-          </li>
-        </ol>
+        <div class="flex">
+          <ul class="list-style">
+            <li class="list-item">
+              <a
+                class="list-style"
+                href="https://www.homeruninnpizza.com/restaurants/archer-ave/"
+                target="_blank"
+              >
+                Home Run Inn Pizza (6221 S Archer Ave)
+              </a>
+            </li>
+            <li class="list-item">
+              <a
+                href="https://www.dannyschicago.com/"
+                target="_blank"
+                class="list-style"
+              >
+                Danny’s Pizza, Pasta & Burgers (6021 S Archer Ave)
+              </a>
+            </li>
+            <li class="list-item">
+              <a
+                class="list-style"
+                href="https://ciaoragazzirestaurantandbar.com/"
+                target="_blank"
+              >
+                Ciao Ragazzi Restaurant & Bar (5440 S Narragansett Ave)
+              </a>
+            </li>
+            <li class="list-item">
+              <a
+                class="list-style"
+                href="https://www.facebook.com/GRFarmersmarket/"
+                target="_blank"
+              >
+                Midway Chamber Farmers Market (55th & Archer)
+              </a>
+            </li>
+          </ul>
+        </div>
+
 
         <h2>Explore Garfield Ridge</h2>
         <iframe
@@ -221,12 +270,18 @@
         </figure>
 
         <figure>
-          <img src="https://imagescdn.homes.com/i2/hBiJgTNkKnwHfGGsnrkc5LMWRnAvYvYoVB7vNzkHl6Y/102/garfield-ridge-chicago-il-2.jpg?p=1" alt="Garfield Ridge" />
+          <img
+            src="https://imagescdn.homes.com/i2/hBiJgTNkKnwHfGGsnrkc5LMWRnAvYvYoVB7vNzkHl6Y/102/garfield-ridge-chicago-il-2.jpg?p=1"
+            alt="Garfield Ridge"
+          />
           <figcaption>Garfield Ridge</figcaption>
         </figure>
 
         <figure>
-          <img src="https://imagescdn.homes.com/i2/q2YnKcCrO7qWu839Jeq32n4nj2j2v-MpAvNYXi4JuOM/116/garfield-ridge-chicago-il-29.jpg?p=1" alt="Garfield Ridge sign" />
+          <img
+            src="https://imagescdn.homes.com/i2/q2YnKcCrO7qWu839Jeq32n4nj2j2v-MpAvNYXi4JuOM/116/garfield-ridge-chicago-il-29.jpg?p=1"
+            alt="Garfield Ridge sign"
+          />
           <figcaption>Garfield Ridge Chicago proud</figcaption>
         </figure>
       </div>

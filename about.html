@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>About</title>
   <link rel="stylesheet" href="./css/font-styles.css" />
+  <link rel="stylesheet" href="./css/about.css" />
   <link rel="stylesheet" href="./css/layout-styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,222 +13,182 @@
     rel="stylesheet"
   />
   <style>
-    body {
-      font-family: 'Libre Caslon Text', serif;
-      margin: 0;
-      background-color: #f9f9f9;
-    }
-
-    .navbar {
-      background-color: #333;
-      padding: 0.5rem 1rem;
-    }
-
-    .nav-list {
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-      margin: 0;
-    }
-
-    .nav-list li {
-      flex: 1;
-      text-align: center;
-    }
-
-    .nav-list a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      padding: 0.75rem;
-      font-weight: bold;
-    }
-
-    .nav-list a:hover {
-      background-color: #555;
-    }
-
     .container {
-      padding: 40px;
-      max-width: 1000px;
+      padding: 1rem 2rem;
+      max-width: 80%;
       margin: 0 auto;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    .authors{
-      background-color: #fafafa;
-    }
-
-    .author__content {
-
-    }
 
     .author__grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.25rem;
+      margin-top: 2.5rem;
 
-      @include breakpoint-up(large){
-        grid-template-columns: repeat (4,1fr);
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 769px) and (max-width: 1023px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
     
-    .author__items{
-      border-radius: 0.3125;
-      overflow: hidden;
-      box-shadow: 0px 3px 12px rgba(0,0,0,0.15);
-      transition: all 150ms ease-in-out;
-
-    }
-    
-    .author__items:hover {
-     transform: scale(1.05);
-    }
-    
     .author__image{
-      height:12.25rem;
+      height:auto;
+      width: 250px;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-
     }
-
-    .author__text{
-      color:#9698a6;
-      background-color:#D9D9D9;
-      height: 
-
-    }
-
-    .author__name{
-      font-size: 1.25rem;
-
-    }
+    .author-card{
+      padding: 1.25rem;
+      height: fit-content;
+      background-color: transparent;
+      border-radius: 1rem;
     
-    .author__description{
-      font-size: 0.875rem;
-
     }
-    
-    .neighborhood-links {
+
+    .author-card:hover {
+      transform: scale(1.05);
+      transition: all 150ms ease-in-out;
+      box-shadow: 0px 3px 12px rgba(0,0,0,0.1);
+    }
+
+    .author__text {
+      padding: .25rem;
+      background-color: transparent;
+      border-radius: 0.3125rem;
+    }
+
+    .author-name {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
       margin-top: 30px;
-    }
-
-    .neighborhood-links ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .neighborhood-links li {
-      margin: 10px 0;
-    }
-
-    .neighborhood-links a {
-      color: #0066cc;
       text-decoration: none;
-      font-weight: bold;
     }
 
-    .neighborhood-links a:hover {
-      text-decoration: underline;
+    .author-bio {
+      font-size: 1rem;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
     }
+
+   
   </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="garfield-ridge.html">Garfield Ridge</a></li>
-      <li><a href="edgewater.html">Edgewater</a></li>
-      <li><a href="mtgreenwood.html">Mt. Greenwood</a></li>
-      <li><a href="rogerspark.html">Rogers Park</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="./../assets/navbar-logo/logo.svg"
+          alt="Neighborhoods of Chicago"
+        />
+        <h1 class="navbar-main">Neighborhoods of Chicago</h1>
+      </div>
+      <ul class="nav-list">
+        <li><a href="./../index.html">Home</a></li>
+        <li><a href="./garfield-ridge.html">Garfield Ridge</a></li>
+        <li><a href="./edgewater.html">Edgewater</a></li>
+        <li><a href="./mtgreenwood.html">Mt. Greenwood</a></li>
+        <li><a href="./rogerspark.html">Rogers Park</a></li>
+        <li><a href="./../about.html">About</a></li>
+      </ul>
+    </nav>
+
+
+     <!-- Page Title -->
+     <div class="page-banner" id="pageBanner">
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <h1>Explore Chicago’s Neighborhoods</h1>
+        <p>Scroll down to discover each community’s unique flavor.</p>
+      </div>
+    </div>
 
   <div class="container">
   <!-- start of author 1 -->  
-    <section class="authors">
-      <div class="author__content>
+    <section class="">
+      <div class="">
         <h1>About Us</h1>
         <div class="author__grid">
           
-          <div class="author__items">
+          <div class="author-card">
             <a href="https://www.linkedin.com/in/francesca-e-guerrero/">
-            <div class="author__image" style="background-image: url('assets/images/francesca_image.jpg');"></div>
-            </a>   
+            <img class="author__image" src="./assets/images/francesca_image.jpg"/>
+               
             
             <div class="author__text">
-              <div class="author_name"> Francesca Guerrero</div>
-              <div class="author_description"> I have lived in Chicago since 2015 - another queer Brown southerner fleeing the region.
+              <h4 class="author-name"> Francesca Guerrero</h4>
+              <p class="author-bio"> I have lived in Chicago since 2015 - another queer Brown southerner fleeing the region.
               I have lived in Rogers Park for all of it. This city's been good to me, and I love talking about it to anyone visiting or 
               family and friends who love me too much to quell my enthusiasm. I also love history, and this city's chock full of it. The 
               shifting demographics of every pocket of Chicago is fascinating and truly still evolving. With that, I knew immediately on
               receiving this CIS 181 assignment I wanted to use this project to discuss my favorite city and my first real home. 
-              Thankfully my group members agreed with the concept!</div>
+              Thankfully my group members agreed with the concept!</p>
             </div>
-          </div>
+          </div></a>
 <!-- start of author 2 -->
-          <div class="author__items">
-            <a href="INSERT LINKEDIN LINK HERE">
-             <div class="author__image" style="background-image: url('assets/images/Tulio_image.png');"></div>
-            </a>   
+          <div class="author-card">
+            <a href="https://www.linkedin.com/in/tulio-salvatierra/">
+             <img class="author__image" src="./assets/images/Tulio_image.png"/>
+               
             
-            <div class="author__text">
-              <div class="author_name"> Tulio Salvatierra </div>
-              <div class="author_description">I’m Tulio Salvatierra, originally from Venezuela and now based in Chicago.
+            
+              <h4 class="author-name"> Tulio Salvatierra </h4>
+              <p class="author-bio">Originally from Venezuela and now based in Chicago.
                 I started this project as part of the CIS 181 course at Daley College, with the goal of sharing general
                 insights into Chicago’s neighborhoods. I’m a web developer focused on front-end technologies like HTML,
                 CSS, JavaScript, and React, and I’m expanding into full-stack development with Node.js and Express, along
-                with cloud platforms like AWS and Azure.</div>
-            </div>
+                with cloud platforms like AWS and Azure.</p>
+            </a>
           </div>
 <!-- start of author 3 -->
-          <div class="author__items">
+          <div class="author-card">
             <a href="https://www.linkedin.com/in/kseniia-kormalova/">
-             <div class="author__image" style="background-image: url('assets/images/kseniia_image.jpg');"></div>
-            </a>   
+             <img class="author__image" src="./assets/images/kseniia_image.jpg"/>
+            
             
             <div class="author__text">
-              <div class="author_name"> Kseniia Kormalova </div>
-              <div class="author_description"> 
+              <h4 class="author-name"> Kseniia Kormalova </h4>
+              <p class="author-bio"> 
                 While working as a math teacher for elementary students, I realized that the problem-solving and pattern recognition
                 skills I enjoyed most in teaching also applied to software development. My curiosity about how technology works and 
                 my love for learning new languages—both spoken and programming—led me to enroll in the Software Development program 
                 at Truman College. This project was a great experience for me, especially because I focused on Edgewater, 
                 the neighborhood I love and live in. I even used my own photos for the Edgewater page, which made the project feel 
-                more personal and meaningful. </div>
-            </div>
+                more personal and meaningful. </p>
+            </div></a>
           </div>
 <!-- start of author 4 -->
-          <div class="author__items">
-            <a href="https://www.linkedin.com/in/emilio-hernandez-0068a1292">
-            <div class="author__image" style="background-image: url('assets/images/Emilio_image.png');"></div>
-            </a>   
+          <div class="author-card">
+            <a href="https://www.linkedin.com/in/emilio-hernandez-0068a1292/">
+            <img class="author__image" src="./assets/images/Emilio_image.png"/>
+               
             
             <div class="author__text">
-              <div class="author_name"> Emilio Hernandez</div>
-              <div class="author_description">
+              <h4 class="author-name"> Emilio Hernandez</h4>
+              <p class="author-bio">
                 I'm Emilio Hernandez. I was born and raised in Chicago in 2007. I grew up in Mt. Greenwood, and I went to both private and public schools in my childhood.
                 I wanted to express my experiences inside my neighborhood throughout this project by sharing some of the things that make it interesting.
                 I'm interested in technology, but not sure exactly where I'd best fit in. Currently, I'm using both this class and my internship at IBM to figure out what sparks my interest before graduating from high school.
-              </div>
-            </div>
+              </p>
+            </div></a>
           </div>
           
         </div>        
       </div>
+      <a href="./index.html">Back to Home</a>
     </section>
   
   </div>

@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Edgewater Neighborhood</title>
-  <link rel="stylesheet" href="./../css/font-styles.css" />
-  <link rel="stylesheet" href="./../css/layout-styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edgewater Neighborhood</title>
+    <link rel="stylesheet" href="./../css/font-styles.css" />
+    <link rel="stylesheet" href="./../css/layout-styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-  <style>
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      padding: 20px;
-    }
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 20px;
+      }
 
-    .text-section {
-      flex: 2;
-    }
+      .text-section {
+        flex: 2;
+      }
 
-    .image-section {
-      flex: 1;
-    }
+      .image-section {
+        flex: 1;
+      }
 
-    .image-section figure {
-      margin-bottom: 20px;
-    }
+      .image-section figure {
+        margin-bottom: 20px;
+      }
 
     .image-section img {
       width: 100%;
@@ -39,43 +39,64 @@
       display: block;
     }
 
-    .image-section figcaption {
-      font-size: 0.9em;
-      color: #444;
-      margin-top: 5px;
-    }
-
     .navbar {
-      background-color: #333;
-      padding: 0.5rem 1rem;
-    }
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+      }
 
-    .nav-list {
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      padding: 0;
-      margin: 0;
-    }
+      .nav-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+      }
 
-    .nav-list li {
-      flex: 1;
-      text-align: center; 
-    }
+      .nav-list a {
+        color: #d4052b;
+        font-size: 1em;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        white-space: nowrap;
+      }
 
-    .nav-list a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      padding: 0.75rem;
-      font-weight: bold;
-    }
-
-    .nav-list a:hover {
-      background-color: #555;
-    }
+      .navbar-main {
+        font-size: 1.5em;
+        margin-left: 10px;
+      }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        width: auto;
+      }
 
   </style>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const banner = document.getElementById("pageBanner");
+        let initialHeight = banner.offsetHeight;
+    
+        function onScrollOrResize() {
+          const scrollY = window.pageYOffset;
+          // calculate new height (won’t go below 20vh)
+          const newHeight = Math.max(initialHeight - scrollY, window.innerHeight * 0.2);
+          banner.style.height = `${newHeight}px`;
+        }
+    
+        // recalc initial height if window resizes
+        window.addEventListener("resize", () => {
+          initialHeight = banner.offsetHeight;
+          onScrollOrResize();
+        });
+    
+        window.addEventListener("scroll", onScrollOrResize);
+      });
+    </script>
 </head>
 <body>
 
@@ -95,13 +116,19 @@
   </ul>
 </nav>
   
-
-<h1>Edgewater Neighborhood</h1>
+<!-- Page Title -->
+    <div class="page-banner" id="pageBanner">
+      <div class="page-banner-overlay"></div>
+      <div class="page-banner-content">
+        <h1>Explore Chicago’s Neighborhoods</h1>
+        <p>Scroll down to discover each community’s unique flavor.</p>
+      </div>
+    </div>
 
 <!-- Flex Layout Container -->
 <div class="container">
   <!-- Text content -->
-  <div class="text-section">
+  <div class="text-section table-content">
     <h2>About Edgewater</h2>
     <p>
       Edgewater, located on Chicago's North Side, is a vibrant lakefront community known for its rich history, stunning architecture, and diverse neighborhoods. 
@@ -118,51 +145,75 @@
       Residents and visitors alike enjoy easy access to Lake Michigan’s beaches, cultural festivals, and a variety of unique shops and restaurants.
     </p>
 
-    <h2>Neighborhoods and Historic Districts</h2>
-    <ul>
-      <li><strong>Andersonville:</strong> Known for its Swedish heritage, indie shops, and lively commercial district.</li>
-      <li><strong>Edgewater Glen:</strong> A quiet residential area featuring charming early 20th-century homes.</li>
-      <li><strong>Bryn Mawr Historic District:</strong> Famous for historic architecture, art deco buildings, and vintage streetlamps.</li>
-      <li><strong>Lakewood-Balmoral Historic District:</strong> Listed on the National Register of Historic Places, with beautifully preserved homes from the late 1800s.</li>
-    </ul>
+        <h2>Neighborhoods and Historic Districts</h2>
+        <ul>
+          <li>
+            <strong>Andersonville:</strong> Known for its Swedish heritage,
+            indie shops, and lively commercial district.
+          </li>
+          <li>
+            <strong>Edgewater Glen:</strong> A quiet residential area featuring
+            charming early 20th-century homes.
+          </li>
+          <li>
+            <strong>Bryn Mawr Historic District:</strong> Famous for historic
+            architecture, art deco buildings, and vintage streetlamps.
+          </li>
+          <li>
+            <strong>Lakewood-Balmoral Historic District:</strong> Listed on the
+            National Register of Historic Places, with beautifully preserved
+            homes from the late 1800s.
+          </li>
+        </ul>
 
-    <h2>Parks and Recreation</h2>
-    <p>
-      Edgewater offers fantastic outdoor spaces, including access to multiple beaches and parks. 
-      The community is adjacent to Lincoln Park, Chicago's largest park, which stretches for seven miles along the lakefront. 
-      Locals love visiting Foster Beach and Osterman Beach for summer fun and year-round scenic views.
-    </p>
+        <h2>Parks and Recreation</h2>
+        <p>
+          Edgewater offers fantastic outdoor spaces, including access to
+          multiple beaches and parks. The community is adjacent to Lincoln Park,
+          Chicago's largest park, which stretches for seven miles along the
+          lakefront. Locals love visiting Foster Beach and Osterman Beach for
+          summer fun and year-round scenic views.
+        </p>
 
     <h2 id="favorites">Favorite Places in Edgewater</h2>
-    <ol>
-      <li><a href="https://www.sferachicago.com/" target="_blank">Sfera Sicilian Street Food</a></li>
-      <li><a href="https://lostlarson.com/" target="_blank">Lost Larson</a></li>
-      <li><a href="https://edgewatercandles.com/" target="_blank">Edgewater Candles</a></li>
-      <li><a href="https://unchartedbooks.com/" target="_blank">Uncharted Books</a></li>
-    </ol>
+    <ul>
+      <li class="item"><a href="https://www.sferachicago.com/" target="_blank">Sfera Sicilian Street Food</a></li>
+      <li class="item"><a href="https://lostlarson.com/" target="_blank">Lost Larson</a></li>
+      <li class="item"><a href="https://edgewatercandles.com/" target="_blank">Edgewater Candles</a></li>
+      <li class="item"><a href="https://unchartedbooks.com/" target="_blank">Uncharted Books</a></li>
+    </ul>
 
-    <h2>Explore Edgewater</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/qEl3ynMOR3k" title="Edgewater Neighborhood Video" frameborder="0" allowfullscreen></iframe>
-  </div>
+        <h2>Explore Edgewater</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/qEl3ynMOR3k"
+          title="Edgewater Neighborhood Video"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
 
-  <!-- Images with captions -->
-  <div class="image-section">
-    <figure>
-      <img src="assets/images/edgewater_church.jpg" alt="The Saint Ita Catholic Church bell tower">
-      <figcaption>The Saint Ita Catholic Church bell tower.</figcaption>
-    </figure>
+      <!-- Images with captions -->
+      <div class="image-section">
+        <figure>
+          <img
+            src="assets/images/edgewater_church.jpg"
+            alt="The Saint Ita Catholic Church bell tower"
+          />
+          <figcaption>The Saint Ita Catholic Church bell tower.</figcaption>
+        </figure>
 
-    <figure>
-      <img src="assets/images/magnolia_glen.jpg" alt="Magnolia Glen">
-      <figcaption>Magnolia Glen.</figcaption>
-    </figure>
+        <figure>
+          <img src="assets/images/magnolia_glen.jpg" alt="Magnolia Glen" />
+          <figcaption>Magnolia Glen.</figcaption>
+        </figure>
 
-    <figure>
-      <img src="assets/images/lake_view.jpg" alt="View of Lake Michigan">
-      <figcaption>Lakefront views along Edgewater’s shoreline.</figcaption>
-    </figure>
-  </div>
-</div>
-
-</body>
+        <figure>
+          <img src="assets/images/lake_view.jpg" alt="View of Lake Michigan" />
+          <figcaption>Lakefront views along Edgewater’s shoreline.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </body>
 </html>
